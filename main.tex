@@ -1,0 +1,47 @@
+\synctex=1
+\input{./Secciones/Caratula.tex}
+
+\usepackage{float}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{booktabs}
+\usepackage{multirow} 
+\usepackage{siunitx}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{blindtext}
+\usepackage{multicol}
+\usepackage{enumerate}
+\usepackage{mathtools}
+\usepackage{array}
+\usepackage{soul}
+\usepackage{booktabs}
+\usepackage{svg}
+
+\usepackage[spanish]{babel} \addto\captionsspanish{\def\tablename{Tabla}   
+\def\listtablename{\'Indice de tablas} } 
+
+
+
+
+
+\begin{document}
+  \maketitle
+
+  \null
+  \thispagestyle{empty}
+  \pagebreak
+
+  \setcounter{page}{1}
+  \tableofcontents
+  \newpage
+  %\listoffigures
+  %\listoftables
+  %\pagebreak
+  
+  \input{Secciones/Introduccion.tex}
+  \input{Secciones/MarcoTeorico.tex}
+  \input{Secciones/ActividadPractica.tex}
+  \input{Secciones/Conclusiones.tex}
+  
+\end{document}
