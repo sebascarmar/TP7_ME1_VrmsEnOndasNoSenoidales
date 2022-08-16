@@ -1,7 +1,64 @@
   \subsection{Medición de tensión eficaz de ondas no sinusoidales}
-    
+    Haciendo uso del generador de funciones se setean señales de forma cuadrada y
+    triangular de una amplitud de $5~V_{pp}$ y frecuencia de $50~Hz$. Luego, se 
+    mide el valor de tensión con ambos multímetros, se calcula el error, y finalmente,
+    se tabula.
+
     \subsubsection{En una onda cuadrada}
+      En la Figura~\ref{fig:SeñalCuadrada} se puede observar la señal cuadrada seteada.
+      Luego, en la Figura~\ref{fig:MedicionSeñalCuadrada} se observa la medición de tensión
+      con ambos multímetros.
+
+      \begin{figure}[H]
+        \centering
+        \frame{\includegraphics[width=0.5\textwidth]{Imagenes/ActividadPractica/MedicionDeTensionEficaz/Exp1_SeñalCuadrada.jpeg}}
+        \caption{Señal cuadrada a medir.}
+        \label{fig:SeñalCuadrada}
+      \end{figure}
+
+      \begin{figure}[H]
+        \centering
+        \frame{\includegraphics[width=0.5\textwidth]{Imagenes/ActividadPractica/MedicionDeTensionEficaz/Exp1_MedicionSeñalCuadrada.jpeg}}
+        \caption{Mediciones de la señal cuadrada.}
+        \label{fig:MedicionSeñalCuadrada}
+      \end{figure}
+
+      Luego, la cota de correción para el multímetro de respuesta al valor medio del módulo es
+
+      \begin{align*}
+        e [\%] = \dfrac{V_{RMS} - V_{|med|}}{V_{|med|}} \cdot 100
+               = \dfrac{2,4~V - 2,2~V}{2,2V} \cdot 100
+               \hspace{20pt} \Longrightarrow \hspace{20pt} \Aboxed{e = +9,09\%}~.
+      \end{align*}
+
 
     \subsubsection{En una onda triangular}
+      En la Figura~\ref{fig:SeñalTriangular} se puede observar la señal cuadrada seteada.
+      Luego, en la Figura~\ref{fig:MedicionSeñalTriangular} se observa la medición de tensión
+      con ambos multímetros.
+
+      \begin{figure}[H]
+        \centering
+        \frame{\includegraphics[width=0.5\textwidth]{Imagenes/ActividadPractica/MedicionDeTensionEficaz/Exp1_SeñalTriangular.jpeg}}
+        \caption{Señal triangular a medir.}
+        \label{fig:SeñalTriangular}
+      \end{figure}
+
+      \begin{figure}[H]
+        \centering
+        \frame{\includegraphics[width=0.5\textwidth]{Imagenes/ActividadPractica/MedicionDeTensionEficaz/Exp1_MedicionSeñalTriangular.jpeg}}
+        \caption{Mediciones de la señal triangular.}
+        \label{fig:MedicionSeñalTriangular}
+      \end{figure}
+
+      Luego, la cota de correción para el multímetro de respuesta al 
+      valor medio del módulo es
+
+      \begin{align*}
+        e [\%] = \dfrac{V_{RMS} - V_{|med|}}{V_{|med|}} \cdot 100
+               = \dfrac{1,4~V - 1,0~V}{1~V} \cdot 100
+               \hspace{20pt} \Longrightarrow \hspace{20pt} \Aboxed{e = +40\%}~.
+      \end{align*}
+
 
   
