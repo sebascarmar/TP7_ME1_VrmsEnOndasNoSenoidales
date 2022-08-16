@@ -1,6 +1,26 @@
   \section{Actividad Práctica}
+    Se propone como actividad realizar mediciones de tensión en formas de onda no senoidales,
+    empezando por una triangular y una cudradada, para luego terminar con una proveniente
+    de un circuito controlador del ángulo de disparo. Para ello, se hace uso de los siguientes
+    insumos
+
+    \begin{itemize}
+      \item Multímetro JA-830D con detector del valor medio del módulo
+      \item Multímetro UT61D con detector True RMS
+      \item Generador de funciones FULANO DE TAL
+      \item Circuito de control de disparo con triac y diac
+      \item Transformador de asilación
+      \item Osciloscopio digital Rigol DS1052E
+      \item Medidor digital de potencia y factor de potencia
+    \end{itemize}
     
-    
+    Es importante y obligatorio el uso de un \textbf{transformador de aislación},
+    el cual posee una de relación 1:1, y tiene como función crear una barrera física de aislación
+    entre los equipos/circuitos con los cuales se trabaja y la red. Esto se justifica con que, la diferencia de
+    potencial entre \textit{neutro} y \textit{tierra} de la red no es cero (idealmente debería serlo), para este caso, dicho
+    valor es de aproximadamente $\mathbf{1,27\ V}$. Este valor generaría un flujo de corriente a través del osciloscopio 
+    directo a la \textit{tierra}, lo cual podría dañar el instrumento, y además, provocaría que el diferencial se active.
+
     \input{Secciones/Subsecciones/MedicionDeTensionEficaz.tex}
     \input{Secciones/Subsecciones/MedicionDeTensionEficazConCircuitoTriac.tex}
     \input{Secciones/Subsecciones/MedicionDeFactorDePotenciaConCircuitoTriac.tex}
