@@ -11,54 +11,85 @@
 
       \begin{figure}[H]
         \centering
-        \frame{\includegraphics[width=0.5\textwidth]{Imagenes/ActividadPractica/MedicionDeTensionEficaz/Exp1_SeñalCuadrada.jpeg}}
+        \frame{\includegraphics[width=0.48\textwidth]{Imagenes/ActividadPractica/MedicionDeTensionEficaz/Exp1_OndaCuadrada.png}}
         \caption{Señal cuadrada a medir.}
         \label{fig:SeñalCuadrada}
       \end{figure}
 
       \begin{figure}[H]
         \centering
-        \frame{\includegraphics[width=0.5\textwidth]{Imagenes/ActividadPractica/MedicionDeTensionEficaz/Exp1_MedicionSeñalCuadrada.jpeg}}
+        \begin{subfigure}[ht]{0.48\textwidth}
+          \frame{\includegraphics[width=\textwidth]{Imagenes/ActividadPractica/MedicionDeTensionEficaz/Exp1_Vrms_Cuadrada.jpeg}}
+          \caption{Medición $V_{RMS}$.}
+          \label{fig:MedicionVrmsCuadrada}
+        \end{subfigure}
+        \hfill 
+        \begin{subfigure}[ht]{0.48\textwidth}
+          \frame{\includegraphics[width=\textwidth]{Imagenes/ActividadPractica/MedicionDeTensionEficaz/Exp1_Vmed_Cuadrada.jpeg}}
+          \caption{Medición $V_{|med|}$.}
+          \label{fig:MedicionVmedCuadrada}
+        \end{subfigure}
         \caption{Mediciones de la señal cuadrada.}
-        \label{fig:MedicionSeñalCuadrada}
+         \label{fig:MedicionSeñalCuadrada}
       \end{figure}
 
-      Luego, la cota de correción para el multímetro de respuesta al valor medio del módulo es
+
+      Luego, la cota de corrección para el multímetro de respuesta al valor medio del módulo es
 
       \begin{align*}
         e [\%] = \dfrac{V_{RMS} - V_{|med|}}{V_{|med|}} \cdot 100
-               = \dfrac{2,4~V - 2,2~V}{2,2V} \cdot 100
-               \hspace{20pt} \Longrightarrow \hspace{20pt} \Aboxed{e = +9,09\%}~.
+               = \dfrac{2,450~V - 2,748~V}{2,748V} \cdot 100
+               \hspace{20pt} \Longrightarrow \hspace{20pt} \Aboxed{e = -10,84\%}~.
       \end{align*}
 
 
     \subsubsection{En una onda triangular}
-      En la Figura~\ref{fig:SeñalTriangular} se puede observar la señal cuadrada seteada.
+      En la Figura~\ref{fig:SeñalTriangular} se puede observar la señal triangular seteada.
       Luego, en la Figura~\ref{fig:MedicionSeñalTriangular} se observa la medición de tensión
       con ambos multímetros.
 
       \begin{figure}[H]
         \centering
-        \frame{\includegraphics[width=0.5\textwidth]{Imagenes/ActividadPractica/MedicionDeTensionEficaz/Exp1_SeñalTriangular.jpeg}}
+        \frame{\includegraphics[width=0.45\textwidth]{Imagenes/ActividadPractica/MedicionDeTensionEficaz/Exp1_OndaTriangular.png}}
         \caption{Señal triangular a medir.}
         \label{fig:SeñalTriangular}
       \end{figure}
 
       \begin{figure}[H]
         \centering
-        \frame{\includegraphics[width=0.5\textwidth]{Imagenes/ActividadPractica/MedicionDeTensionEficaz/Exp1_MedicionSeñalTriangular.jpeg}}
+        \begin{subfigure}[ht]{0.48\textwidth}
+          \frame{\includegraphics[width=\textwidth]{Imagenes/ActividadPractica/MedicionDeTensionEficaz/Exp1_Vrms_Triangular.jpeg}}
+          \caption{Medición $V_{RMS}$.}
+          \label{fig:MedicionVrmsTriangular}
+        \end{subfigure}
+        \hfill 
+        \begin{subfigure}[ht]{0.48\textwidth}
+          \frame{\includegraphics[width=\textwidth]{Imagenes/ActividadPractica/MedicionDeTensionEficaz/Exp1_Vmed_Triangular.jpeg}}
+          \caption{Medición $V_{|med|}$.}
+          \label{fig:MedicionVmedTriangular}
+        \end{subfigure}
         \caption{Mediciones de la señal triangular.}
-        \label{fig:MedicionSeñalTriangular}
+         \label{fig:MedicionSeñalTriangular}
       \end{figure}
 
-      Luego, la cota de correción para el multímetro de respuesta al 
+      Luego, la cota de corrección para el multímetro de respuesta al 
       valor medio del módulo es
 
       \begin{align*}
         e [\%] = \dfrac{V_{RMS} - V_{|med|}}{V_{|med|}} \cdot 100
-               = \dfrac{1,4~V - 1,0~V}{1~V} \cdot 100
-               \hspace{20pt} \Longrightarrow \hspace{20pt} \Aboxed{e = +40\%}~.
+               = \dfrac{1,452~V - 1,421~V}{1,421~V} \cdot 100
+               \hspace{20pt} \Longrightarrow \hspace{20pt} \Aboxed{e = +2,18\%}~.
       \end{align*}
 
-
+    Los resultados de este experimento se encuentran consignados en la
+    Tabla~\ref{tab:MedicionesOndasCuadYTrian}.
   
+    \begin{table}[H] \centering
+      \begin{tabular}{|c|c|c|c|} \hline
+        \textbf{Señal}     & \textbf{Lectura RMS [V]}  & \textbf{Lectura |med| [V]} & \textbf{e [\%]} \\ \hline
+      $\mathbf{Cuadrada~(50~Hz - 5~V_{pp})}$    & 2,450     & 2,748         &  -10,84        \\ \hline
+      $\mathbf{Triangular~(50~Hz - 5~V_{pp})}$  & 1,452      & 1,421        &  +2,18         \\ \hline
+      \end{tabular}
+      \caption{Tabla de mediciones y cotas de corrección.}
+      \label{tab:MedicionesOndasCuadYTrian}
+    \end{table}
