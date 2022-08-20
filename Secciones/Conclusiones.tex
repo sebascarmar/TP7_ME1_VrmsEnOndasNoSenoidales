@@ -1,1 +1,83 @@
   \section{Conclusiones}
+    En relación con el primer experimento realizado en este trabajo
+    práctico, se procede a obtener de forma analítica los valores
+    de las cotas de corrección de las mediciones realizadas con
+    el multímetro con respuesta al valor medio del módulo de la 
+    tensión.
+    
+    Se sabe que los multímetros de respuesta al valor medio del
+    módulo realizan una corrección mediante una cota para obtener 
+    el valor eficaz de la medición. Para obtener dicha cota, se 
+    hace uso de los siguientes valores representativos de una 
+    \textbf{señal senoidal}
+
+    \vspace{-5pt}
+    $$ V_{RMS_{\sin}} = \dfrac{V_{\max}}{\sqrt{2}} \hspace{20pt} ; 
+    \hspace{20pt} V_{|med|_{\sin}} = \dfrac{2\, V_{\max}}{\pi}~. $$
+
+    \noindent Luego, la cota de corrección (factor de forma) se obtiene
+    relacionando las expresiones anteriores
+    
+    \vspace{-5pt}
+     $$ k = \dfrac{V_{RMS_{\sin}}}{V_{|med|_{\sin}}} 
+        = \dfrac{\dfrac{V_{\max}}{\sqrt{2}}}{\dfrac{2\, V_{\max}}{\pi}}
+        \hspace{20pt} \Longrightarrow \hspace{20pt} k = 1,1107~.$$
+
+    El valor antes encontrado, es el que permite saber que el multímetro
+    de respuesta al valor medio del módulo muestra en el display el 
+    resultado de $ V_{lectura} = 1,1102 \cdot V_{|med|}~. $
+
+    Teniendo en cuenta lo mencionado anteriormente, y que para una señal cuadrada
+    su valor eficaz y valor medio de módulo se expresan mediante
+
+    \vspace{-5pt}
+    $$ V_{RMS_{cuad}} = V_{\max} \hspace{20pt} ; \hspace{20pt} V_{|med|_{cuad}} = V_{\max}~, $$
+
+    \noindent entonces, la cota de corrección para la medición de 
+    la señal cuadrada es
+
+    \vspace{-5pt}
+    $$ e_{cuad} [\%] = \dfrac{V_{RMS_{cuad}} - k\cdot V_{|med|_{cuad}}}{k \cdot V_{|med|_{cuad}}} \cdot 100
+              = \dfrac{V_{\max} - 1,1107\, V_{\max}}{1,1107\, V_{\max}} \cdot 100 $$
+              $$  \therefore \hspace{20pt} \boxed{e_{cuad}[\%] = -9,97\%}~.
+    $$
+
+    Siguiendo la misma línea, para una señal triangular sus valor eficaz y valor
+    medio de módulo se expresan mediante
+
+    \vspace{-5pt}
+$$ V_{RMS_{tri}} = \dfrac{V_{\max}}{\sqrt{3}} \hspace{20pt} ; \hspace{20pt} V_{|med|_{tri}} = \dfrac{V_{\max}}{2}~, $$
+
+    \noindent entonces, la cota de corrección para la medición de 
+    la señal triangular es
+
+    \vspace{-5pt}
+    $$ e_{tri} [\%] = \dfrac{V_{RMS_{tri}} - k\cdot V_{|med|_{tri}}}{k \cdot V_{|med|_{tri}}} \cdot 100
+    = \dfrac{ \dfrac{V_{\max}}{\sqrt{3}} - 1,1107\, \dfrac{V_{\max}}{2}}{1,1107\, \dfrac{V_{\max}}{2}} \cdot 100 $$
+              $$  \therefore \hspace{20pt} \boxed{e_{tri}[\%] = +3,96\%}~.
+    $$
+
+    En la Tabla~\ref{tab:ComparacionCotas} se puede observar la comparación entre valores
+    prácticos y teóricos de las mediciones realizadas con el multímetro de respuesta al 
+    valor medio del módulo. Los valores presentan diferencias entre sí, en especial
+    en el caso de la señal triangular. Esto se puede explicar en base a que el
+    instrumento no está diseñado para medir este tipo de señales de forma correcta. 
+
+    \begin{table}[H] \centering
+      \begin{tabular}{|c|c|c|c|} \hline
+        \textbf{Señal}       & \textbf{Error práctico [\%]}  & \textbf{Error teórico [\%]} & \textbf{Factor de forma} \\ \hline
+        Cuadrada    & -10,84               & -9,97              &  1              \\ \hline
+        Triangular  & +2,18                & +3,96              &  1,1547         \\ \hline
+      \end{tabular}
+      \caption{Tabla de comparación de cotas.}
+      \label{tab:ComparacionCotas}
+    \end{table}
+
+
+
+
+
+
+
+
+
