@@ -8,3 +8,4 @@
 *.toc
 *.swp
 *build
+*.synctex(busy)
