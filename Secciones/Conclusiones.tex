@@ -38,9 +38,9 @@
     la señal cuadrada es
 
     \vspace{-5pt}
-    $$ e_{cuad} [\%] = \dfrac{V_{RMS_{cuad}} - k\cdot V_{|med|_{cuad}}}{k \cdot V_{|med|_{cuad}}} \cdot 100
-              = \dfrac{V_{\max} - 1,1107\, V_{\max}}{1,1107\, V_{\max}} \cdot 100 $$
-              $$  \therefore \hspace{20pt} \boxed{e_{cuad}[\%] = -9,97\%}~.
+    $$ e_{cuad} [\%] = \dfrac{V_{|med|_{cuad}} - k\cdot V_{RMS_{cuad}}}{k \cdot V_{RMS_{cuad}}} \cdot 100
+              = \dfrac{1,1107\, V_{\max} - V_{\max}}{V_{\max}} \cdot 100 $$
+              $$  \therefore \hspace{20pt} \boxed{e_{cuad}[\%] = +11,07\%}~.
     $$
 
     Siguiendo la misma línea, para una señal triangular sus valor eficaz y valor
@@ -53,9 +53,9 @@ $$ V_{RMS_{tri}} = \dfrac{V_{\max}}{\sqrt{3}} \hspace{20pt} ; \hspace{20pt} V_{|
     la señal triangular es
 
     \vspace{-5pt}
-    $$ e_{tri} [\%] = \dfrac{V_{RMS_{tri}} - k\cdot V_{|med|_{tri}}}{k \cdot V_{|med|_{tri}}} \cdot 100
-    = \dfrac{ \dfrac{V_{\max}}{\sqrt{3}} - 1,1107\, \dfrac{V_{\max}}{2}}{1,1107\, \dfrac{V_{\max}}{2}} \cdot 100 $$
-              $$  \therefore \hspace{20pt} \boxed{e_{tri}[\%] = +3,96\%}~.
+    $$ e_{tri} [\%] = \dfrac{V_{|med|_{tri}} - k\cdot V_{RMS_{tri}}}{k \cdot V_{RMS_{tri}}} \cdot 100
+    = \dfrac{ 1,1107\, \dfrac{V_{\max}}{2} - \dfrac{V_{\max}}{\sqrt{3}} }{\dfrac{V_{\max}}{\sqrt{3}}} \cdot 100 $$
+              $$  \therefore \hspace{20pt} \boxed{e_{tri}[\%] = -3,81\%}~.
     $$
 
     En la Tabla~\ref{tab:ComparacionCotas} se puede observar la comparación entre valores
@@ -67,8 +67,8 @@ $$ V_{RMS_{tri}} = \dfrac{V_{\max}}{\sqrt{3}} \hspace{20pt} ; \hspace{20pt} V_{|
     \begin{table}[H] \centering
       \begin{tabular}{|c|c|c|c|} \hline
         \textbf{Señal}       & \textbf{Error práctico [\%]}  & \textbf{Error teórico [\%]} & \textbf{Factor de forma} \\ \hline
-        Cuadrada    & -10,84               & -9,97              &  1              \\ \hline
-        Triangular  & +2,18                & +3,96              &  1,1547         \\ \hline
+        Cuadrada    & +12,16               & +11,07              &  1,000              \\ \hline
+        Triangular  & -2,13                & -3,81              &  1,1547         \\ \hline
       \end{tabular}
       \caption{Tabla de comparación de cotas.}
       \label{tab:ComparacionCotas}
