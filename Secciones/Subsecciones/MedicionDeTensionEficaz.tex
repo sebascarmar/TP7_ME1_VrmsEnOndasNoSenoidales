@@ -37,9 +37,9 @@
       Luego, la cota de corrección para el multímetro de respuesta al valor medio del módulo es
 
       \begin{align*}
-        e_{cuad} [\%] = \dfrac{V_{RMS} - V_{|med|}}{V_{|med|}} \cdot 100
-               = \dfrac{2,450~V - 2,748~V}{2,748V} \cdot 100
-               \hspace{20pt} \therefore \hspace{10pt} \Aboxed{e_{cuad} = -10,84\%}~.
+        e_{cuad} [\%] = \dfrac{V_{|med|} - V_{RMS}}{V_{RMS}} \cdot 100
+               = \dfrac{2,748~V - 2,450~V}{2,450} \cdot 100
+               \hspace{20pt} \therefore \hspace{10pt} \Aboxed{e_{cuad} = +12,16\%}~.
       \end{align*}
 
 
@@ -76,9 +76,9 @@
       valor medio del módulo es
 
       \begin{align*}
-        e_{tri} [\%] = \dfrac{V_{RMS} - V_{|med|}}{V_{|med|}} \cdot 100
-               = \dfrac{1,452~V - 1,421~V}{1,421~V} \cdot 100
-               \hspace{20pt} \therefore \hspace{20pt} \Aboxed{e_{tri}= +2,18\%}~.
+        e_{tri} [\%] = \dfrac{V_{|med|} - V_{RMS}}{V_{RMS}} \cdot 100
+               = \dfrac{1,421~V - 1,452~V}{1,452~V} \cdot 100
+               \hspace{20pt} \therefore \hspace{20pt} \Aboxed{e_{tri}= -2,13\%}~.
       \end{align*}
 
     Los resultados de este experimento se encuentran consignados en la
@@ -87,8 +87,8 @@
     \begin{table}[H] \centering
       \begin{tabular}{|c|c|c|c|} \hline
         \textbf{Señal}     & \textbf{Lectura RMS [V]}  & \textbf{Lectura |med| [V]} & \textbf{e [\%]} \\ \hline
-      $\mathbf{Cuadrada~(50~Hz - 5~V_{pp})}$    & 2,450     & 2,748         &  -10,84        \\ \hline
-      $\mathbf{Triangular~(50~Hz - 5~V_{pp})}$  & 1,452      & 1,421        &  +2,18         \\ \hline
+      $\mathbf{Cuadrada~(50~Hz - 5~V_{pp})}$    & 2,450     & 2,748         &  +12,16        \\ \hline
+      $\mathbf{Triangular~(50~Hz - 5~V_{pp})}$  & 1,452      & 1,421        &  -2,13         \\ \hline
       \end{tabular}
       \caption{Tabla de mediciones y cotas de corrección.}
       \label{tab:MedicionesOndasCuadYTrian}
