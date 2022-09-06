@@ -74,8 +74,48 @@ $$ V_{RMS_{tri}} = \dfrac{V_{\max}}{\sqrt{3}} \hspace{20pt} ; \hspace{20pt} V_{|
       \label{tab:ComparacionCotas}
     \end{table}
 
+En relación con el tercer experimento, se observó que el comportamiento del 
+circuito (según la lectura del factor de potencia del dispositivo empleado), 
+es de tipo inductivo, ya que al conectar el capacitor, el factor de potencia 
+mejoró.
 
+En primera instancia, se desconoce el funcionamiento interno del medidor de potencia.
+Por lo que se puede suponer, que responde de manera similar a un vatímetro ideal.
 
+Para tener un punto de partida sobre el cual analizar la razón de lo anteriormente 
+expuesto, se supone las condiciones 
+inciales de la siguiente manera: El TRIAC no está en región de conducción, por 
+lo tanto el DIAC tampoco debería estarlo, así, ambos pueden representarse como 
+un circuito abierto en el esquema de la Figura \ref{fig:CircuitoTriacDiac}. La 
+segunda condición, es que el capacitor inicia totalmente descargado.
+
+Bajo las suposiciones anteriores, el circuito resultante será el que se enseña 
+en la Figura \ref{fig:ConclusionRCTriac}.
+
+\begin{figure}[H]
+  \centering
+  \frame{\includegraphics[width=0.8\textwidth]{Imagenes/Conclusiones/Exp3_Circuito en condicion inicial.png}}
+  \caption{Situación inicial del circuito con TRIAC.}
+  \label{fig:ConclusionRCTriac}
+\end{figure}
+
+Como puede observarse, se trata de un circuito adelantador de fase, cuya 
+respuesta en frecuencia, puede demostrarse que se comporta como un circuito RL 
+serie.
+
+La explicación de que el dispositivo utilizado para medir el factor de potencia, 
+tome al circuito como de naturaleza inductiva, se debe al adelanto de fase de la 
+señal de tensión de salida, respecto de la de entrada.
+
+Una vez que la tensión en el capacitor alcanza los 30[V] , el DIAC entra en región 
+de conducción reduciendo su resistencia dinámica al mínimo, polarizando a su vez el 
+TRIAC, y cerrando el ciclo de carga-descarga del capacitor. En éste punto, el sistema 
+posee un comportamiento resistivo puro.
+
+Como la condición impuesta en un principio, se mantiene 
+al menos la mitad del ciclo de onda, se podría decir que tendrá comportamiento mayormente 
+reactivo, de ésta manera, el dispositivo de medición determina que el circuito tiene 
+características inductivas.
 
 
 
