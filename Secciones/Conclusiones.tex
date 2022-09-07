@@ -79,13 +79,26 @@ circuito (según la lectura del factor de potencia del dispositivo empleado),
 es de tipo inductivo, ya que al conectar el capacitor, el factor de potencia 
 mejoró.
 
-En primera instancia, se desconoce el funcionamiento interno del medidor de potencia.
-Por lo que se puede suponer, que responde de manera similar a un vatímetro ideal.
+En primera instancia, cabe destacar, que se desconoce el funcionamiento interno del medidor de potencia.
+Por lo que se puede suponer, que responde de manera similar a un vatímetro ideal. 
+En base a lo anteriormente mencionado, es posible hacer un primer análisis, a partir 
+de la modificación del ángulo de disparo al agregar el capacitor. El segundo análisis, 
+se hace a partir de la topología del circuito, para un tiempo dado.
 
-Para tener un punto de partida sobre el cual analizar la razón de lo anteriormente 
-expuesto, se supone las condiciones 
+Para comenzar el primer análisis, se supone el método de medición de cruces 
+por cero de la señal de corriente, que consiste en medir desfasamiento de la misma, 
+respecto de la tensión aplicada, a partir de un cambio de sentido de corriente. 
+El circuito de control de ángulo de disparo, modifica dichos cruces a partir de la 
+tensión en el capacitor de entrada. De ésta manera, al modificar el circuito conectando 
+un segundo capacitor a la salida, dicha tensión del capacitor de entrada se ve alterada y, por 
+lo tanto, el ángulo de disparo también. Entonces, puede decirse que la mejora del factor 
+de potencia, marcada por el medidor se debe a que, al conectar el capacitor, el cruce por 
+cero se mueve junto con el ángulo de disparo en forma de adelanto respecto al punto original.
+
+Para realizar el segundo análisis a partir de la topología del circuito, se debe 
+tomar un punto de referencia. Para ello se supone las condiciones 
 inciales de la siguiente manera: El TRIAC no está en región de conducción, por 
-lo tanto el DIAC tampoco debería estarlo, así, ambos pueden representarse como 
+lo tanto el DIAC tampoco, pudiendo representarlos como 
 un circuito abierto en el esquema de la Figura \ref{fig:CircuitoTriacDiac}. La 
 segunda condición, es que el capacitor inicia totalmente descargado.
 
