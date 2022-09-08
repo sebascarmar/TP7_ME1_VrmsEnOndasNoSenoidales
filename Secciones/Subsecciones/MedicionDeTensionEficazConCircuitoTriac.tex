@@ -14,7 +14,7 @@ de ángulo de disparo, circuito que se enseña en la Figura \ref{fig:CircuitoTri
 El procedimiento consiste en medir la tensión de entrada al circuito, 
 y medir la de salida sobre la carga, tomando lecturas
 al variar el ángulo de conducción con un multímetro que mide True RMS y otro de valor medio. 
-Luego se debe confeccionar un gráfico normalizado de tension de salida 
+Luego, se debe confeccionar un gráfico normalizado de tensión de salida 
 respecto de la entrada, con las curvas obtenidas con cada instrumento.
 
 El esquema de conexión se presenta a continuación en la Figura \ref{fig:EsquemaConexionTriac}.
@@ -26,13 +26,13 @@ El esquema de conexión se presenta a continuación en la Figura \ref{fig:Esquem
   \label{fig:EsquemaConexionTriac}
 \end{figure}
 
-Se presentan a continuación los valores tabulados.
+Se presentan a continuación en la Tabla~\ref{tab:TablaExp2} los valores tabulados.
 
 \begin{table}[H]
 \centering
   \begin{tabular}{|c|c|c|c|c|}
     \hline
-      Fase & $Vo_1$[V] & $Vo_2$[V] & $(\frac{Vo_1}{V_{in}})$[V] & $(\frac{Vo_2}{V_{in}})$[V] \\
+      \textbf{Fase} & $\mathbf{Vo_1~[V]}$ & $\mathbf{Vo_2~[V]}$ & $\mathbf{(\frac{Vo_1}{V_{in}})}$ & $\mathbf{(\frac{Vo_2}{V_{in}})}$ \\
     \hline
       0°    & 234     & 234     & 1,064   & 1,064\\
       36°   & 222,8   & 211,6   & 1,013   & 0,962\\
@@ -46,10 +46,39 @@ Se presentan a continuación los valores tabulados.
 \label{tab:TablaExp2}
 \end{table}
 
+      \begin{figure}[H]
+        \centering
+        \begin{subfigure}[ht]{0.48\textwidth}
+          \frame{\includegraphics[width=\textwidth]{Imagenes/ActividadPractica/MedicionDeTensionEficazConCircuitoTriac/Exp2_AnguloDisparo36º.png}}
+          \caption{Ángulo de 36°.}
+        \end{subfigure}
+        \hfill 
+        \begin{subfigure}[ht]{0.48\textwidth}
+          \frame{\includegraphics[width=\textwidth]{Imagenes/ActividadPractica/MedicionDeTensionEficazConCircuitoTriac/Exp2_AnguloDisparo72º.png}}
+          \caption{Ángulo de 72°.}
+        \end{subfigure}
+        \begin{subfigure}[ht]{0.48\textwidth}
+          \frame{\includegraphics[width=\textwidth]{Imagenes/ActividadPractica/MedicionDeTensionEficazConCircuitoTriac/Exp2_AnguloDisparo108º.png}}
+          \caption{Ángulo de 108°.}
+        \end{subfigure}
+        \hfill 
+        \begin{subfigure}[ht]{0.48\textwidth}
+          \frame{\includegraphics[width=\textwidth]{Imagenes/ActividadPractica/MedicionDeTensionEficazConCircuitoTriac/Exp2_AnguloDisparo144º.png}}
+          \caption{Ángulo de 144°.}
+        \end{subfigure}
+        \begin{subfigure}[ht]{0.48\textwidth}
+          \frame{\includegraphics[width=\textwidth]{Imagenes/ActividadPractica/MedicionDeTensionEficazConCircuitoTriac/Exp2_AnguloDisparo180º.png}}
+          \caption{Ángulo de 180°.}
+        \end{subfigure}
+
+        \caption{Medición de tensión eficaz para distintos ángulos de conducción.}
+         \label{fig:MedicionAnguloConduccion}
+      \end{figure}
+
 Finalmente, se confecciona un gráfico con los valores obtenidos, 
 donde se visualizan las curvas de los instrumentos, cuyos valores 
 son relativos al valor medido de la red, que en éste caso corresponde 
-con 234[V] eficaces.
+con 234~V eficaces.
 
 \begin{figure}[H]
   \centering
