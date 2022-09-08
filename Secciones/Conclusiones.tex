@@ -7,7 +7,7 @@
     tensión.
     
     Se sabe que los multímetros de respuesta al valor medio del
-    módulo realizan una corrección mediante una cota para obtener 
+    módulo, realizan una corrección mediante una cota para obtener 
     el valor eficaz de la medición. Para obtener dicha cota, se 
     hace uso de los siguientes valores representativos de una 
     \textbf{señal senoidal}
@@ -16,7 +16,7 @@
     $$ V_{RMS_{\sin}} = \dfrac{V_{\max}}{\sqrt{2}} \hspace{20pt} ; 
     \hspace{20pt} V_{|med|_{\sin}} = \dfrac{2\, V_{\max}}{\pi}~. $$
 
-    \noindent Luego, la cota de corrección (factor de forma) se obtiene
+    \noindent Luego, el factor de forma se obtiene
     relacionando las expresiones anteriores
     
     \vspace{-5pt}
@@ -26,7 +26,7 @@
 
     El valor antes encontrado, es el que permite saber que el multímetro
     de respuesta al valor medio del módulo muestra en el display el 
-    resultado de $ V_{lectura} = 1,1102 \cdot V_{|med|}~. $
+    resultado de $ V_{lectura} = 1,1107 \cdot V_{|med|}~. $
 
     Teniendo en cuenta lo mencionado anteriormente, y que para una señal cuadrada
     su valor eficaz y valor medio de módulo se expresan mediante
@@ -34,11 +34,11 @@
     \vspace{-5pt}
     $$ V_{RMS_{cuad}} = V_{\max} \hspace{20pt} ; \hspace{20pt} V_{|med|_{cuad}} = V_{\max}~, $$
 
-    \noindent entonces, la cota de corrección para la medición de 
+    \noindent entonces, el error porcentual para la medición de 
     la señal cuadrada es
 
     \vspace{-5pt}
-    $$ e_{cuad} [\%] = \dfrac{V_{|med|_{cuad}} - k\cdot V_{RMS_{cuad}}}{k \cdot V_{RMS_{cuad}}} \cdot 100
+    $$ e_{cuad} [\%] = \dfrac{k \cdot V_{|med|_{cuad}} -  V_{RMS_{cuad}}}{V_{RMS_{cuad}}} \cdot 100
               = \dfrac{1,1107\, V_{\max} - V_{\max}}{V_{\max}} \cdot 100 $$
               $$  \therefore \hspace{20pt} \boxed{e_{cuad}[\%] = +11,07\%}~.
     $$
@@ -49,20 +49,23 @@
     \vspace{-5pt}
 $$ V_{RMS_{tri}} = \dfrac{V_{\max}}{\sqrt{3}} \hspace{20pt} ; \hspace{20pt} V_{|med|_{tri}} = \dfrac{V_{\max}}{2}~, $$
 
-    \noindent entonces, la cota de corrección para la medición de 
+    \noindent entonces, el error porcentual para la medición de 
     la señal triangular es
 
     \vspace{-5pt}
-    $$ e_{tri} [\%] = \dfrac{V_{|med|_{tri}} - k\cdot V_{RMS_{tri}}}{k \cdot V_{RMS_{tri}}} \cdot 100
+    $$ e_{tri} [\%] = \dfrac{k\cdot V_{|med|_{tri}} - V_{RMS_{tri}}}{V_{RMS_{tri}}} \cdot 100
     = \dfrac{ 1,1107\, \dfrac{V_{\max}}{2} - \dfrac{V_{\max}}{\sqrt{3}} }{\dfrac{V_{\max}}{\sqrt{3}}} \cdot 100 $$
               $$  \therefore \hspace{20pt} \boxed{e_{tri}[\%] = -3,81\%}~.
     $$
 
-    En la Tabla~\ref{tab:ComparacionCotas} se puede observar la comparación entre valores
+    En la Tabla~\ref{tab:ComparacionCotas}, se puede observar la comparación entre valores
     prácticos y teóricos de las mediciones realizadas con el multímetro de respuesta al 
     valor medio del módulo. Los valores presentan diferencias entre sí, en especial
-    en el caso de la señal triangular. Esto se puede explicar en base a que el
-    instrumento no está diseñado para medir este tipo de señales de forma correcta. 
+    en el caso de la señal triangular. Esto se
+    puede fundamentar en base a que, el factor de forma de la señal triangular indica que el valor eficaz
+    difiere un 15\% aproximadamente del valor medio del módulo, siendo que el instrumento está
+    diseñado para medir éste último. Por otro lado, en la señal cuadrada ambos valores
+    son iguales, lo que justifica que la diferencia de error sea menor.
 
     \begin{table}[H] \centering
       \begin{tabular}{|c|c|c|c|} \hline
@@ -79,56 +82,56 @@ circuito (según la lectura del factor de potencia del dispositivo empleado),
 es de tipo inductivo, ya que al conectar el capacitor, el factor de potencia 
 mejoró.
 
-En primera instancia, cabe destacar, que se desconoce el funcionamiento interno del medidor de potencia.
-Por lo que se puede suponer, que responde de manera similar a un vatímetro ideal. 
-En base a lo anteriormente mencionado, es posible hacer un primer análisis, a partir 
-de la modificación del ángulo de disparo al agregar el capacitor. El segundo análisis, 
-se hace a partir de la topología del circuito, para un tiempo dado.
+Para comenzar análisis, se supone el método de medición de cruces 
+por cero de la señal de tensión y corriente, que consiste en medir el retardo entre 
+ambas señales.
+Al variar el potenciómetro del circuito de control de ángulo de disparo, se modifica la constante 
+de tiempo $\tau$ de carga y descarga del capacitor, lo que provoca un retardo en el disparo de la 
+señal de la corriente de entrada, como puede observarse en la Figura \ref{fig:SeñalExp3}, ya que 
+se modifica el instante en que conduce el diac. Esto provoca que el medidor detecte un falso desfasaje. 
 
-Para comenzar el primer análisis, se supone el método de medición de cruces 
-por cero de la señal de corriente, que consiste en medir desfasamiento de la misma, 
-respecto de la tensión aplicada, a partir de un cambio de sentido de corriente. 
-El circuito de control de ángulo de disparo, modifica dichos cruces a partir de la 
-tensión en el capacitor de entrada. De ésta manera, al modificar el circuito conectando 
-un segundo capacitor a la salida, dicha tensión del capacitor de entrada se ve alterada y, por 
-lo tanto, el ángulo de disparo también. Entonces, puede decirse que la mejora del factor 
-de potencia, marcada por el medidor se debe a que, al conectar el capacitor, el cruce por 
-cero se mueve junto con el ángulo de disparo en forma de adelanto respecto al punto original.
 
-Para realizar el segundo análisis a partir de la topología del circuito, se debe 
-tomar un punto de referencia. Para ello se supone las condiciones 
-inciales de la siguiente manera: El TRIAC no está en región de conducción, por 
-lo tanto el DIAC tampoco, pudiendo representarlos como 
-un circuito abierto en el esquema de la Figura \ref{fig:CircuitoTriacDiac}. La 
-segunda condición, es que el capacitor inicia totalmente descargado.
 
-Bajo las suposiciones anteriores, el circuito resultante será el que se enseña 
-en la Figura \ref{fig:ConclusionRCTriac}.
+%  De ésta manera, al modificar el circuito conectando 
+% un segundo capacitor a la salida, dicha tensión del capacitor de entrada se ve alterada y, por 
+% lo tanto, el ángulo de disparo también. Entonces, puede decirse que la mejora del factor 
+% de potencia, marcada por el medidor se debe a que al conectar el capacitor, el cruce por 
+% cero se mueve junto con el ángulo de disparo en forma de adelanto respecto al punto original.
 
-\begin{figure}[H]
-  \centering
-  \frame{\includegraphics[width=0.8\textwidth]{Imagenes/Conclusiones/Exp3_Circuito en condicion inicial.png}}
-  \caption{Situación inicial del circuito con TRIAC.}
-  \label{fig:ConclusionRCTriac}
-\end{figure}
+% Para realizar el segundo análisis a partir de la topología del circuito, se debe 
+% tomar un punto de referencia. Para ello se supone las condiciones 
+% inciales de la siguiente manera: El TRIAC no está en región de conducción, por 
+% lo tanto el DIAC tampoco, pudiendo representarlos como 
+% un circuito abierto en el esquema de la Figura \ref{fig:CircuitoTriacDiac}. La 
+% segunda condición, es que el capacitor inicia totalmente descargado.
 
-Como puede observarse, se trata de un circuito adelantador de fase, cuya 
-respuesta en frecuencia, puede demostrarse que se comporta como un circuito RL 
-serie.
+% Bajo las suposiciones anteriores, el circuito resultante será el que se enseña 
+% en la Figura \ref{fig:ConclusionRCTriac}.
 
-La explicación de que el dispositivo utilizado para medir el factor de potencia, 
-tome al circuito como de naturaleza inductiva, se debe al adelanto de fase de la 
-señal de tensión de salida, respecto de la de entrada.
+% \begin{figure}[H]
+%   \centering
+%   \frame{\includegraphics[width=0.8\textwidth]{Imagenes/Conclusiones/Exp3_Circuito en condicion inicial.png}}
+%   \caption{Situación inicial del circuito con TRIAC.}
+%   \label{fig:ConclusionRCTriac}
+% \end{figure}
 
-Una vez que la tensión en el capacitor alcanza los 30[V] , el DIAC entra en región 
-de conducción reduciendo su resistencia dinámica al mínimo, polarizando a su vez el 
-TRIAC, y cerrando el ciclo de carga-descarga del capacitor. En éste punto, el sistema 
-posee un comportamiento resistivo puro.
+% Como puede observarse, se trata de un circuito adelantador de fase, cuya 
+% respuesta en frecuencia, puede demostrarse que se comporta como un circuito RL 
+% serie.
 
-Como la condición impuesta en un principio, se mantiene 
-al menos la mitad del ciclo de onda, se podría decir que tendrá comportamiento mayormente 
-reactivo, de ésta manera, el dispositivo de medición determina que el circuito tiene 
-características inductivas.
+% La explicación de que el dispositivo utilizado para medir el factor de potencia, 
+% tome al circuito como de naturaleza inductiva, se debe al adelanto de fase de la 
+% señal de tensión de salida, respecto de la de entrada.
+
+% Una vez que la tensión en el capacitor alcanza los 30[V] , el DIAC entra en región 
+% de conducción reduciendo su resistencia dinámica al mínimo, polarizando a su vez el 
+% TRIAC, y cerrando el ciclo de carga-descarga del capacitor. En éste punto, el sistema 
+% posee un comportamiento resistivo puro.
+
+% Como la condición impuesta en un principio, se mantiene 
+% al menos la mitad del ciclo de onda, se podría decir que tendrá comportamiento mayormente 
+% reactivo, de ésta manera, el dispositivo de medición determina que el circuito tiene 
+% características inductivas.
 
 
 
