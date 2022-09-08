@@ -1,58 +1,49 @@
 \subsection{Valor eficaz}
 
-    El valor eficaz, es aquel que produce la misma disipación de potencia 
-    media, es decir valor medio de la potencia instantánea, sobre un 
-    resistor que una señal de continua.
+    El valor eficaz es aquel que produce la misma disipación de potencia 
+    media (valor medio de la potencia instantánea) sobre un 
+    resistor, que la que disipa una señal de continua.
     
-    \noindent Supongamos una corriente \(i(t)\) en un periodo T, la cual 
-    al circular por una resistencia R, disipando una potencia instantánea 
-    \begin{equation*}
-        P_a = i^2(t)~R~.
-    \end{equation*}
-
-    \noindent Por ende la potencia media será
+    Partiendo de una corriente \(i(t)\) en un periodo T, que circula 
+    por una resistencia R, disipando una potencia instantánea  \(P_a = i^2(t)~R\).
+    Por ende, la potencia media será
     \begin{equation*}
         P_a = \dfrac{1}{T} \int_{0}^{T} P_a(t)~dt ~ = ~ 
         \dfrac{1}{T} \int_{0}^{T} i^2(t)~R~dt ~.
     \end{equation*}
 
-    \noindent Ahora, suponiendo una potencia instantánea debido a una 
-    corriente continua sobre la misma resistencia R
-    \begin{equation*}
-        P_c = I^2(t)~R~.
-    \end{equation*} 
-
-    \noindent Si se iguala \(P_a = P_c\), se obtiene 
+    Ahora, suponiendo una potencia instantánea \(P_c = I^2(t)~R\) debido a una 
+    corriente continua sobre la misma resistencia R,
+    al igualar \(P_a = P_c\), se obtiene 
     \begin{equation*}
         \dfrac{1}{T} \int_{0}^{T} i^2(t)~R~dt = I^2(t)~R~.    
     \end{equation*}
 
-    \noindent Por ultimo, vemos que la corriente que produce la
+    Por último, se ve que la corriente que produce la
     misma disipación de potencia que la señal de alterna es 
-    \begin{equation*}
-        I_{ef} = \sqrt{\dfrac{1}{T} \int_{0}^{T} i^2(t)~dt}~.
-    \end{equation*}
+    \begin{equation}
+        I_{ef} = \sqrt{\dfrac{1}{T} \int_{0}^{T} i^2(t)~dt}~. \label{eqn:Veficaz}
+    \end{equation}
 
     \noindent El valor eficaz obtenido, es la raíz cuadrática media
-    dela señal \(i(t)\), conocido por sus siglas en ingles como RMS 
-    (\textit{root mean square}) 
+    de la señal \(i(t)\), conocido por sus siglas en inglés como 
+    \textit{root mean square} (RMS).
 
-        \subsubsection{Obtencion del valor Eficaz en una señal Seoidal}
+        \subsubsection{Obtención del valor eficaz en una señal senoidal}
 
-            Partiendo de una señal \(V_p\sin(\omega t)\), integrada en un 
-            periodo \(2\pi\)
+            Partiendo de una señal \(V_p\sin(\omega t)\) y de la ecuación (\ref{eqn:Veficaz}), 
+            integrada en un período \(2\pi\)
             \begin{equation*}
-                V_{ef} = \sqrt{\dfrac{1}{2\pi} \int_{0}^{2\pi} (V_p~\sin(\omega t))^2~dt}~.        
+                V_{ef} = \sqrt{\dfrac{1}{2\pi} \int_{0}^{2\pi} (V_p~\sin(\omega t))^2~dt}~,        
             \end{equation*}
-            
-            \noindent Resolviendo la ecuación, se obtiene el \(V_{ef}\) 
-            para una onda senoidal 
+
+            \noindent al resolverla se obtiene     
             \begin{equation*}
                 V_{ef} = \dfrac{V_p}{\sqrt{2}}~.    
             \end{equation*}    
 
-            \noindent Para señales Cuadradas y triangulase el \(V_{ef}\) será
-            \begin{equation*}
-                V_{ef_{cuadr}}  =  V_p \hspace{20pt} ; \hspace{20pt}
+            Para señales cuadradas y triangulares el \(V_{ef}\) es
+            \begin{equation}
+                V_{ef_{cuadr}}  =  V_p \hspace{20pt} ; \hspace{20pt}    \label{eqn:VeficazdeSeñales}
                 V_{ef_{triang}} = \dfrac{V_p}{\sqrt{3}}~.
-            \end{equation*}
+            \end{equation}

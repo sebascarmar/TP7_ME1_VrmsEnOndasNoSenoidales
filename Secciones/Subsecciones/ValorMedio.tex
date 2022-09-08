@@ -7,43 +7,42 @@
         \int_{a}^{b} i(t)~dt = (b-a)\cdot i(\eta)~. \label{eqn:EcuMedia}
     \end{equation}
 
-    \noindent Ahora si el intervalo presentado, es igual a un período T, entonces 
-    el valor \(i(\eta)\) se concidera el valor medio de una señal \(i(t)\), 
-    \(I_{med} = i(\eta)\). Despejando el valor medio de la ecuación~\ref{eqn:EcuMedia}
+    \noindent Ahora, si el intervalo presentado es igual a un período T de una señal periódica,
+    entonces el valor \(i(\eta)\) se considera el valor medio de dicha señal \(i(t)\), 
+    \(I_{med} = i(\eta)\). Despejando el valor medio de la ecuación~(\ref{eqn:EcuMedia})
     \begin{equation*}
+        i(\eta) = \dfrac{1}{(b-a)} \int_{a}^{b} i(t)~dt \hspace{10pt} \Longrightarrow \hspace{10pt}
         I_{med}= \dfrac{1}{T}\int_{0}^{T} i(t)~dt~.
     \end{equation*}
 
-    El valor de la integral, puede ser cero en caso de que la señal sea simétrica, es decir,
-    que su área positiva sea igual que la negativa, como en señales seoidales puras o 
-    cuadradas.
-    
-    \noindent Por ende, en caso de señales que posean un valor medio nulo, se calcula el
-    \textit{valor medio del módulo} tomando la integral a lo largo de un período 
-    |\(i(t)\)| de la señal
+    El valor de la integral, puede ser cero en caso de que la señal sea periódica
+    y no posea un nivel de continua, debido a que su área positiva es igual que la 
+    negativa, como en señales senoidales puras o cuadradas. Por ende, en caso de 
+    señales que posean un valor medio nulo, se calcula el \textit{valor medio del módulo} 
+    tomando la integral a lo largo de un período de la señal
     \begin{equation*}
         I_{|med|} ~ = \dfrac{1}{T} \int_{0}^{T} |i(t)|~dt~.
     \end{equation*}
 
-        \subsubsection{Obtencion del valor medio en una señal Seoidal}
+        \subsubsection{Obtención del valor medio en una señal senoidal}
 
             Debido a que el valor medio de una onda senoidal es cero, se utiliza el 
-            valor medio del módulo de la misma. Por ende partiendo de una onda senoidal
-            con valor medio de modulo \(V_p\sin(\omega t)\), integrado en un periodo \(\pi\)
+            valor medio del módulo de la misma. Por ende, partiendo de una onda senoidal
+            \(V_p\sin(\omega t)\), integrado en un periodo \(\pi\)
             \begin{equation*}
                 V_{|med|} ~ = \dfrac{1}{\pi} \int_{0}^{\pi} |V_p~\sin(\omega t)|~dt~.
             \end{equation*}
 
-            \noindent Resolviendo la integral, se obtiene el valor medio del modulo de una 
+            \noindent Resolviendo la integral, se obtiene el valor medio del módulo de una 
             onda senoidal 
             \begin{equation*}
                 V_{|med|} = \dfrac{2~V_p}{\pi}~.
             \end{equation*}
             
-            \noindent Por ultimo, como en el presente trabajo practico se 
-            utilizará señales cuadráticas y triangulares los \(V_{|med|}\)
+            Por último, como en el presente trabajo práctico se 
+            utilizarán señales cuadráticas y triangulares los \(V_{|med|}\)
             de dichas señales son
-            \begin{equation*}
-                V_{|med|_{cuad}} = V_p \hspace{20pt};\hspace{20pt} 
+            \begin{equation}
+                V_{|med|_{cuad}} = V_p \hspace{20pt};\hspace{20pt} \label{eqn:VmedioSeñales}
                 V_{|med|_{triang}} = \dfrac{V_p}{2}~.
-            \end{equation*}
+            \end{equation}
